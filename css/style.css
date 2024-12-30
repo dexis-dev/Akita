@@ -1,0 +1,482 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('../font/Benzin-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+html {
+    box-sizing: border-box; scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.logo {
+    width: 100px;
+    display: block;
+}
+
+.logo__img {
+    width: 116px;
+    height: 26px;
+}
+
+
+
+
+img {
+    max-width: 100%;
+}
+
+body {
+    margin: 0px;
+    background-color: #000;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.header {
+    background-color: #F5D694;
+}
+
+.header__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.header__burger-btn {
+    display: none;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    z-index: 2;
+}
+
+.header__burger-btn span {
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: rgb(255, 255, 255);
+    left: 5px;
+    transition: transform .5s, opacity .5s, background-color .5s;
+}
+
+.header__burger-btn span:nth-child(1) {
+    transform: translateY(-10px);
+}
+
+.header__burger-btn span:nth-child(3) {
+    transform: translateY(10px);
+}
+
+.header.open .header__burger-btn span {
+    background-color: white;
+}
+
+.header.open .header__burger-btn span:nth-child(1) {
+    transform: translateY(0) rotate(45deg);
+}
+
+.header.open .header__burger-btn span:nth-child(2) {
+    opacity: 0;
+}
+
+.header.open .header__burger-btn span:nth-child(3) {
+    transform: translateY(0) rotate(-45deg);
+}
+
+
+
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu__item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.menu__link {
+    font-family: sans-serif;
+    color: #222222;
+    font-size: 16px;
+}
+
+.menu__link:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 992px) {
+.img-krak {
+    border-radius: 20px;
+}
+    .cont-o {
+        border-radius: 20px;
+    }
+    .header__burger-btn {
+        display: block;
+    }
+    .menu {
+        position: absolute;
+        left: -250px;
+        top: 0;
+        width: 250px;height: 100vh;
+        background-color: #F5D694;
+        padding: 75px 20px 20px 20px;
+        transition: transform .5s;
+    }
+    .menu__list {
+        display: block;
+    }
+    .menu__link {
+        color: white;
+        font-size: 21px;
+        display: block;
+        padding: 10px 0;
+    }
+    .header.open .menu {
+        transform: translateX(100%);
+    }
+}
+
+
+.main_header {
+    background-image: url(../img/main.png);
+    width: 100%;
+    background-position: center;
+    height: 100vh;
+    background-size: cover;
+}
+
+
+.main_container {
+    display: flex;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+.main_container h1 {
+    font-family: 'Bowlby One SC';
+    font-weight: 400;
+    font-size: 96px;
+    color: #181818;
+    line-height: 101px;
+    width: 787px;
+}
+
+
+
+
+.info_header {
+    background-color: #F5D694;
+    width: 100%;
+}
+
+.info_container {
+    max-width: 100%;
+    margin: auto;
+    display: flex;
+    position: relative;
+}
+
+.info_box {
+    width: 100%;
+    margin-top: 148px;
+    margin-bottom: 316px;
+    padding: 0 100px;
+    background-color: #0D1F0F1A;
+    height: auto;
+    padding-top: 37px;
+    padding-bottom: 37px;
+    border-radius: 37px;
+    position: relative;
+    backdrop-filter: blur(12px);
+    z-index: 1;
+}
+
+.info_box h1 {
+    font-family: 'Bowlby One SC';
+    font-size: 84px;
+    text-align: center;
+    font-weight: 400;
+    margin: auto;
+    width: 749px;
+    line-height: 100px;
+}
+.info_box p {
+    text-align: center;
+    font-family: inter;
+    color: #181818E5;
+    font-weight: 400;
+    line-height: 29.05px;
+}
+
+.paw {
+    background-image: url(../img/info/3.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.paw_left {
+    background-image: url(../img/info/1.png);
+    background-repeat: no-repeat;
+}
+
+
+.sect_header {
+    background-color: #ffffff;
+    width: 100%;
+}
+
+.sect_container {
+    display: flex;
+}
+
+
+
+.section_header {
+    background-color: #000;
+    width: 100%;
+}
+
+.section_container {
+    margin: auto;
+    padding: 0 15px;
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.section_title {
+    color: #F9F9F9;
+    font-family: 'Bowlby One SC';
+    font-size: 84px;
+    position: relative;
+
+}
+
+.section_down_title {
+    color: #FFFFFF;
+    font-family: 'MyCustomFont';
+    margin-top: -80px;
+    margin-bottom: 50px;
+    font-size: 22px;position: relative;
+}
+
+.section_box ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10%;
+    transform: translateY(-50%);
+    width: 62px;
+    height: 62px;
+    background-color: white; 
+    border-radius: 50%;
+}
+
+.section_box ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section_box ul li {
+    position: relative;
+    padding-left: 70px; 
+    margin-bottom: 20px;
+}
+
+
+.section_li_paragraph {
+    font-family: manrope;
+    color: #FFFFFFB2;
+    position: relative;
+    font-size: 20px;
+}
+
+.section_li_title {
+    font-family: Manrope;
+    font-weight: 700;
+    margin-top: -20px;
+    font-size: 64px;
+    position: relative;
+    color: #FFFFFF;
+}
+
+.section_li_down {
+    color: #F5D695;
+    font-family: Manrope;
+    margin-top: -50px;
+    font-size: 16px;
+    position: relative;
+}
+
+
+.footer_header {
+    background-color: #0C0C0C;
+    width: 100%;
+}
+
+.footer_container {
+    display: flex;
+    max-width: 1300px;
+    margin: auto;
+    padding: 0 15px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: space-between;
+}
+
+.footer_paragraph {
+    font-family: Manrope;
+    font-size: 15px;
+    color: #ADB7BE;
+}
+
+
+.footer_title {
+    color: #FFFFFF;
+    font-weight: 700;
+    font-family: Oxanium;
+    font-size: 18px;
+}
+
+.footer_box button {
+    width: 36px;
+    height: 36px;
+    border: 0px;
+    cursor: pointer;
+    border-radius: 6px;
+    background-color: #FFFFFF1A;
+
+    transition: transform 0.3s ease;
+}
+
+.footer_box button:hover {
+    transform: scale(1.1);
+}
+
+.footer_box a {
+    font-family: Manrope;
+    font-size: 15px;
+    color: #ADB7BE;
+    margin-left: 30px;
+}
+
+
+@media (max-width: 800px) {
+    .main_container h1 {
+        width: 100%;
+        font-size: 60px;
+    }
+    .info_box h1 {
+        width: 100%;
+    }
+    .section_title {
+        font-size: 50px;
+    }
+    .section_down_title {
+        margin-top: -20px;
+        font-size: 15px;
+    }
+    .section_li_title {
+        font-size: 40px;
+    }
+    .section_box ul li::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 10%;
+        transform: translateY(-50%);
+        width: 32px;
+        height: 32px;
+        background-color: white; 
+        border-radius: 50%;
+    }
+    .info_box h1 {
+        font-size: 30px;
+    }
+    .info_box p {
+        font-size: 17px;
+    }
+    
+}
+
+@media (max-width:410px) {
+    .section_box ul li {
+        position: relative;
+        padding-left: 100px; 
+        margin-bottom: 20px;
+    }
+    .section_title {
+        font-size: 30px;
+    }
+    .section_down_title {
+        font-size: 10px;
+    }
+    
+}
+
+@media (max-width:1000px) {
+    .section_box img {
+        display: none;
+    }
+    .section_container {
+        margin: auto;
+
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+
+     
+        ::-webkit-scrollbar-thumb {
+            background-color: #F5D694;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #F5D695; 
+        }
+
+      
+        ::-webkit-scrollbar-track {
+            background: #222222;
+            border-radius: 5px; 
+           
+        }
